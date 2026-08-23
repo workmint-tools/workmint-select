@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="WorkMint Selectは、働く人の道具・学び・仕事環境を編集部が調査し、選び方をわかりやすく届けるメディアです。">
+  <meta name="theme-color" content="#0e3b35">
+  <meta property="og:title" content="WorkMint Select｜仕事の選択に、確かなものさしを。">
+  <meta property="og:description" content="仕事道具・学び・働く環境を、基準から選べる実用メディア。">
+  <meta property="og:type" content="website">
+  <title>WorkMint Select｜仕事の選択に、確かなものさしを。</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="WorkMint Select ホーム">
+        <span class="brand-mark" aria-hidden="true">W</span>
+        <span>WorkMint <b>Select</b></span>
+      </a>
+      <button class="menu-button" aria-expanded="false" aria-controls="global-nav">メニュー</button>
+      <nav id="global-nav" aria-label="メインナビゲーション">
+        <a href="#articles">記事</a>
+        <a href="#method">選定方針</a>
+        <a href="#about">運営情報</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">BETTER TOOLS, BETTER WORK.</p>
+        <h1>仕事の選択に、<br><em>確かなものさし</em>を。</h1>
+        <p class="lead">WorkMint Selectは、仕事道具・学び・働く環境を「何を基準に選ぶか」から考える実用メディアです。広告の有無にかかわらず、向く人・向かない人まで丁寧に整理します。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#articles">新着記事を読む</a>
+          <a class="button secondary" href="#method">私たちの選び方</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="仕事道具を整理した抽象的なイラスト">
+        <div class="mint-card card-a"><span>FOCUS</span><strong>01</strong></div>
+        <div class="mint-card card-b"><span>LEARN</span><strong>02</strong></div>
+        <div class="mint-card card-c"><span>SELECT</span><strong>03</strong></div>
+        <div class="orbit"></div>
+      </div>
+    </section>
+
+    <section class="promise">
+      <p>WorkMint Selectの約束</p>
+      <div><strong>基準を先に</strong><span>ランキングより、判断軸を伝えます</span></div>
+      <div><strong>弱点も書く</strong><span>メリットだけでなく注意点も明記</span></div>
+      <div><strong>広告を明示</strong><span>利害関係を隠さず運営します</span></div>
+    </section>
+
+    <section class="section" id="articles">
+      <div class="section-heading">
+        <div><p class="eyebrow">EDITOR'S NOTE</p><h2>働き方を整える記事</h2></div>
+        <p>買う前、始める前に知っておきたいことを、編集部の視点で整理しました。</p>
+      </div>
+      <div class="filters" role="group" aria-label="記事カテゴリー">
+        <button class="active" data-filter="all">すべて</button>
+        <button data-filter="tool">仕事道具</button>
+        <button data-filter="learn">学び</button>
+        <button data-filter="work">働き方</button>
+      </div>
+      <div class="article-grid">
+        <article class="article-card featured" data-category="tool">
+          <div class="card-art art-desk"><span>DESK<br>SETUP</span></div>
+          <div class="card-body">
+            <p class="meta"><span>仕事道具</span><time datetime="2026-08-23">2026.08.23</time></p>
+            <h3>在宅ワークの机選び。幅・奥行き・高さを先に決める理由</h3>
+            <p>見た目より先に、作業内容と部屋の動線を測る。失敗しにくい寸法の決め方を解説します。</p>
+            <button class="text-link" data-open="desk">記事を読む <span>→</span></button>
+          </div>
+        </article>
+        <article class="article-card" data-category="tool">
+          <div class="card-art art-chair"><span>CHAIR</span></div>
+          <div class="card-body">
+            <p class="meta"><span>仕事道具</span><time datetime="2026-08-20">2026.08.20</time></p>
+            <h3>ワークチェアは「高機能」より身体との相性で選ぶ</h3>
+            <p>座面、肘掛け、ランバーサポート。試座で確認したい5項目をまとめました。</p>
+            <button class="text-link" data-open="chair">記事を読む <span>→</span></button>
+          </div>
+        </article>
+        <article class="article-card" data-category="learn">
+          <div class="card-art art-learn"><span>LEARN</span></div>
+          <div class="card-body">
+            <p class="meta"><span>学び</span><time datetime="2026-08-16">2026.08.16</time></p>
+            <h3>オンライン講座を選ぶ前に決めたい、学習のゴールと期限</h3>
+            <p>知名度や価格だけで決めないための、目的別チェックリストです。</p>
+            <button class="text-link" data-open="course">記事を読む <span>→</span></button>
+          </div>
+        </article>
+        <article class="article-card" data-category="work">
+          <div class="card-art art-time"><span>25:00</span></div>
+          <div class="card-body">
+            <p class="meta"><span>働き方</span><time datetime="2026-08-12">2026.08.12</time></p>
+            <h3>集中できない日のための、25分から始める仕事設計</h3>
+            <p>気合いに頼らず、作業単位を小さくする実践的な進め方を紹介します。</p>
+            <button class="text-link" data-open="focus">記事を読む <span>→</span></button>
+          </div>
+        </article>
+        <article class="article-card" data-category="tool">
+          <div class="card-art art-key"><span>TYPE</span></div>
+          <div class="card-body">
+            <p class="meta"><span>仕事道具</span><time datetime="2026-08-08">2026.08.08</time></p>
+            <h3>キーボード選びで迷ったら、配列・打鍵感・接続から絞る</h3>
+            <p>毎日触れる道具だからこそ、スペック表の前に用途を整理しましょう。</p>
+            <button class="text-link" data-open="keyboard">記事を読む <span>→</span></button>
+          </div>
+        </article>
+        <article class="article-card" data-category="work">
+          <div class="card-art art-bag"><span>GO</span></div>
+          <div class="card-body">
+            <p class="meta"><span>働き方</span><time datetime="2026-08-02">2026.08.02</time></p>
+            <h3>通勤バッグの中身を軽くする、週1回の棚卸し</h3>
+            <p>持ち物を「毎日・ときどき・念のため」に分け、負担を減らす方法です。</p>
+            <button class="text-link" data-open="bag">記事を読む <span>→</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method">
+      <div class="method-intro">
+        <p class="eyebrow">OUR METHOD</p>
+        <h2>「おすすめ」の前に、<br>選ぶ基準を。</h2>
+        <p>人によって最適解は違います。WorkMint Selectでは、次の4段階で情報を整理し、読者自身が納得して選べる記事を目指します。</p>
+      </div>
+      <ol class="method-list">
+        <li><span>01</span><div><h3>用途を定義</h3><p>誰が、どんな場面で、何を解決したいのかを明確にします。</p></div></li>
+        <li><span>02</span><div><h3>比較軸を設定</h3><p>価格だけでなく、使いやすさ・継続性・サポートなどを比較します。</p></div></li>
+        <li><span>03</span><div><h3>一次情報を確認</h3><p>公式情報や公的資料を優先し、公開日・更新日も確認します。</p></div></li>
+        <li><span>04</span><div><h3>向き不向きを明記</h3><p>良い点だけでなく、注意点と選ばない選択肢も伝えます。</p></div></li>
+      </ol>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div>
+        <p class="eyebrow">ABOUT US</p>
+        <h2>WorkMint Selectについて</h2>
+      </div>
+      <div class="about-copy">
+        <p>WorkMint Selectは、働く人の小さな意思決定を支えるための情報メディアです。デスク環境、デジタルツール、学び、キャリアに関する情報を、できるだけ平易な言葉で届けます。</p>
+        <dl>
+          <div><dt>サイト名</dt><dd>WorkMint Select</dd></div>
+          <div><dt>運営者</dt><dd>WorkMint Select 編集部</dd></div>
+          <div><dt>開設日</dt><dd>2026年8月23日</dd></div>
+          <div><dt>編集方針</dt><dd>読者の判断に役立つ、正確で透明性のある情報発信</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="disclosure" id="policy">
+      <div>
+        <p class="eyebrow">TRANSPARENCY</p>
+        <h2>広告掲載と<br>プライバシーについて</h2>
+      </div>
+      <div>
+        <h3>広告・アフィリエイトプログラム</h3>
+        <p>当サイトは、今後A8.netを含むアフィリエイトプログラムを利用し、商品・サービスへのリンクを通じて報酬を受け取る場合があります。広告を掲載する記事では、その旨を読者にわかる形で表示します。報酬の有無や金額が、評価内容や掲載順位を自動的に決めることはありません。</p>
+        <h3>免責事項</h3>
+        <p>掲載時点で正確な情報の提供に努めますが、内容の完全性・最新性を保証するものではありません。商品・サービスの購入や契約は、必ず公式サイトで最新の条件をご確認のうえ、ご自身の判断で行ってください。当サイトの情報により生じた損害について、運営者は責任を負いかねます。</p>
+        <h3>アクセス情報・Cookie</h3>
+        <p>当サイトでは、品質改善や広告配信のためCookie等を利用する場合があります。これらは通常、氏名や住所など個人を直接特定する情報を含みません。ブラウザの設定によりCookieを無効にできます。</p>
+        <h3>個人情報</h3>
+        <p>お問い合わせで取得した情報は、回答と必要な連絡のためにのみ利用し、法令に基づく場合を除いて第三者へ提供しません。利用目的の達成後は適切に管理・削除します。</p>
+        <p class="updated">制定・最終更新：2026年8月23日</p>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <p class="eyebrow">CONTACT</p>
+      <h2>ご意見・お問い合わせ</h2>
+      <p>記事の訂正依頼、掲載内容、取材・広告掲載に関するお問い合わせは、下記窓口からご連絡ください。内容を確認のうえ、必要に応じて返信します。</p>
+      <a class="button primary" href="https://github.com/workmint-tools/workmint-select/issues/new" target="_blank" rel="noopener noreferrer">お問い合わせ窓口を開く</a>
+    </section>
+  </main>
+
+  <dialog id="article-dialog">
+    <button class="dialog-close" aria-label="記事を閉じる">×</button>
+    <article id="dialog-content"></article>
+  </dialog>
+
+  <footer>
+    <div class="footer-brand">WorkMint <b>Select</b><small>仕事の選択に、確かなものさしを。</small></div>
+    <nav aria-label="フッターナビゲーション">
+      <a href="#articles">記事一覧</a><a href="#method">選定方針</a><a href="#about">運営情報</a><a href="#policy">広告・プライバシー</a><a href="#contact">お問い合わせ</a>
+    </nav>
+    <p>© 2026 WorkMint Select</p>
+  </footer>
+</body>
+</html>
