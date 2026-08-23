@@ -22,3 +22,26 @@ dialog{width:min(760px,calc(100% - 32px));max-height:90vh;border:0;border-radius
 
 .art-guide{background:#c8d7ff;color:#223b72}.art-address{background:#f6e5a9;color:#523f10}.art-check{background:#baf7d0;color:#0e3b35}.art-guide:before,.art-address:before,.art-check:before{content:"";position:absolute;width:105px;height:115px;border:3px solid currentColor;border-radius:12px;opacity:.25}.art-guide span,.art-address span,.art-check span{z-index:2}
 .related-links{margin-top:3rem;padding:24px;border-radius:18px;background:#f5f2e9}.related-links h2{margin-top:0}.related-links a{color:#1d6f55;font-weight:700}.check-list li{margin-bottom:1rem}
+
+
+/* 2026-08-23 editorial refresh */
+.issue-label{font-size:.92rem;font-weight:700;color:#2d6b59;margin:0 0 1rem}
+.hero{grid-template-columns:1.35fr .65fr;min-height:590px;align-items:end}
+.hero h1{font-size:clamp(2.7rem,5.4vw,5.35rem);letter-spacing:-.045em}
+.hero h1 em:after{display:none}
+.editor-note{border-top:2px solid var(--ink);border-bottom:1px solid var(--line);padding:20px 2px 24px;margin-bottom:20px}
+.editor-note .note-date{font-size:.72rem;letter-spacing:.06em;color:var(--muted);margin:0 0 13px}
+.editor-note p{font-size:.88rem;line-height:1.9}
+.editor-note a{font-size:.8rem;font-weight:700;text-decoration:none}
+.eyebrow{font-family:"Noto Sans JP",sans-serif;text-transform:none;letter-spacing:.08em}
+.card-art{height:130px;justify-content:flex-start;align-items:flex-end;padding:20px;font-size:1.15rem;letter-spacing:.05em}
+.featured .card-art{height:190px}
+.card-art:before,.card-art:after{opacity:.55;filter:saturate(.55)}
+.art-desk,.art-chair,.art-learn,.art-time,.art-key,.art-bag{background:#e8ece5;color:#35544c}
+.art-chair{background:#eee6df}.art-learn{background:#e3e7ec}.art-time{background:#dfe7e3}.art-key{background:#ece8d9}.art-bag{background:#dde7e1}
+.article-card{border-radius:5px;box-shadow:none}
+.article-card:hover{transform:none;box-shadow:0 8px 24px rgba(16,49,43,.07)}
+.card-body h3{font-family:"Noto Sans JP",sans-serif;font-weight:600}
+.button{border-radius:4px}
+.method-section{background:#f1efe8}
+@media(max-width:800px){.hero{grid-template-columns:1fr;align-items:start}.editor-note{margin-top:5px}}
