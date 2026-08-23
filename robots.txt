@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://workmint-tools.github.io/workmint-select/sitemap.xml
