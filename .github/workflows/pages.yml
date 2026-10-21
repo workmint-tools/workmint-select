@@ -17,6 +17,43 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # Temporary mitigation until hosted runners include the October security release.
+      - name: Apply and verify Node.js security update before JavaScript actions
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$RUNNER_OS" = Linux
+          test "$RUNNER_ARCH" = X64
+          pid="$PPID"
+          runner_root=""
+          while [ "$pid" -gt 1 ]; do
+            executable="$(readlink -f "/proc/$pid/exe" 2>/dev/null || true)"
+            if [ "${executable##*/}" = Runner.Worker ]; then
+              runner_root="$(dirname "$(dirname "$executable")")"
+              break
+            fi
+            pid="$(awk '/^PPid:/ {print $2}' "/proc/$pid/status")"
+          done
+          test -n "$runner_root"
+          target="$runner_root/externals/node24/bin/node"
+          test -x "$target"
+          current="$("$target" --version)"
+          minimum="24.22.1"
+          if [ "$(printf '%s\n' "$minimum" "${current#v}" | sort -V | head -n 1)" != "$minimum" ]; then
+            stage="$(mktemp -d "$RUNNER_TEMP/node-security.XXXXXX")"
+            curl --fail --silent --show-error --location --retry 3 --proto '=https' --tlsv1.2 \
+              https://nodejs.org/dist/v24.22.1/node-v24.22.1-linux-x64.tar.xz \
+              --output "$stage/node.tar.xz"
+            printf '%s  %s\n' 6c172a9ab6718f7b801fb5a7bd486af2ee5e32758086a04b84fcce2aa77095e6 "$stage/node.tar.xz" | sha256sum --check
+            tar -xJf "$stage/node.tar.xz" -C "$stage"
+            install -m 755 "$stage/node-v24.22.1-linux-x64/bin/node" "$target.security-update"
+            mv -f "$target.security-update" "$target"
+          fi
+          actual="$("$target" --version)"
+          test "$(printf '%s\n' "$minimum" "${actual#v}" | sort -V | head -n 1)" = "$minimum"
+          echo "JavaScript Actions runtime: $actual"
+          echo "$(dirname "$target")" >> "$GITHUB_PATH"
+          echo "Verified JavaScript Actions runtime: $actual" >> "$GITHUB_STEP_SUMMARY"
       - name: Checkout
         uses: actions/checkout@v7.0.1
       - name: Configure Pages
